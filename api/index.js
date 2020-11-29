@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 const app = express();
 const userRoute = require("./routes/userRoute");
+const noteRoute = require("./routes/noteRoute");
 
 // Connect to MongoDB
 mongoose
@@ -14,6 +15,7 @@ app.use(express.json());
 
 // Use routes
 app.use(userRoute);
+app.use("/notes/", noteRoute);
 
 // Start listening
 app.listen(

@@ -59,6 +59,7 @@ exports.loginUser = (req, res) => {
           if (isMatch) {
             // Create JWT Payload
             const payload = {
+              id: currentUser.id,
               name: currentUser.name,
               email: currentUser.email,
             };
