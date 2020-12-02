@@ -14,9 +14,8 @@ exports.registerUser = (req, res) => {
   if (userRegistrationResult.isValid) {
     const newUser = new User({
       name: req.body.name,
-      username: req.body.username,
-      password: bcrypt.hashSync(req.body.password, 10),
       email: req.body.email,
+      password: bcrypt.hashSync(req.body.password, 10),
       registrationDate: Date.now(),
     });
 

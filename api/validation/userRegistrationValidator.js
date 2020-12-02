@@ -5,17 +5,12 @@ module.exports = function validateUserRegistration(data) {
   let errors = {};
 
   data.name = !isEmpty(data.name) ? data.name : "";
-  data.username = !isEmpty(data.username) ? data.username : "";
   data.password = !isEmpty(data.password) ? data.password : "";
   data.repassword = !isEmpty(data.repassword) ? data.repassword : "";
   data.email = !isEmpty(data.email) ? data.email : "";
 
   if (Validatior.isEmpty(data.name)) {
     errors.name = "Name is required";
-  }
-
-  if (Validatior.isEmpty(data.username)) {
-    errors.username = "Username is required";
   }
 
   if (Validatior.isEmpty(data.password)) {
