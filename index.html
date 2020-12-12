@@ -4,21 +4,42 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
-    <title>Notaty</title>
+    <title>Notaty - Login</title>
   </head>
   <body>
     <div id="wrapper">
       <div id="loginBox">
-        <form>
-          <input type="text" name="email" placeholder="name@example.com" />
+        <form id="loginForm">
           <input
+            id="email"
+            type="text"
+            name="email"
+            placeholder="name@example.com"
+          />
+          <p style="display: none" id="emailRequired" class="errorText">
+            Email is not valid
+          </p>
+          <input
+            id="password"
             type="password"
             name="password"
-            placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
+            placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;"
           />
+          <p style="display: none" id="passwordRequired" class="errorText">
+            Password is required
+          </p>
           <button>Sign in</button>
+
+          <p class="signUpText">
+            Don't have an account yet? <a href="register.html">Sign Up</a>
+          </p>
+          <p style="display: none" id="wrongLogin" class="errorText">
+            Please provide a valid username and password.
+          </p>
         </form>
       </div>
     </div>
+
+    <script src="js/login.js"></script>
   </body>
 </html>

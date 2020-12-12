@@ -14,35 +14,64 @@
     <div id="wrapper1">
       <div id="dashboard">
         <div id="leftDashboard">
-          <div id="userInfo">
+          <div class="userWelcome">
             <img
               src="https://cdn0.iconfinder.com/data/icons/user-pictures/100/male-512.png"
             />
+            <p id="welcomeMessage">Welcome :)</p>
+          </div>
+          <div id="userInfo">
+            <button id="signOut" class="buttonStyle">
+              <i class="fas fa-sign-out-alt fa-lg"></i>
+            </button>
+            <button id="newNote" class="buttonStyle">
+              <i class="fas fa-plus fa-lg"></i>
+            </button>
           </div>
           <div id="notes">
-            <ul>
-              <li>Important notes</li>
-              <li class="activeNote">Prince food</li>
-              <li>Remainders</li>
-              <li>Racpie of cake</li>
-            </ul>
-          </div>
-          <div id="actions">
-            <button><i class="fas fa-plus fa-lg"></i></button>
+            <ul id="noteslist"></ul>
           </div>
         </div>
         <div id="rightDashboard">
-          <div id="noteContent">
-            <h1 class="noteTitle">Title of the note</h1>
-            Content bla bla bla bla
-          </div>
           <div id="actions">
-            <button><i class="far fas fa-pen fa-lg"></i></button>
-            <button><i class="far fa-trash-alt fa-lg"></i></button>
-            <button><i class="far fa-save fa-lg"></i></button>
+            <button style="display: none" id="editButton">
+              <i class="far fas fa-pen fa-lg"></i>
+            </button>
+            <button style="display: none" id="deleteButton">
+              <i class="far fa-trash-alt fa-lg"></i>
+            </button>
+          </div>
+          <div id="noteContent">
+            <h1 class="noteTitle">Select a note.</h1>
+            <p id="noteBody"></p>
+            <form id="editorForm">
+              <button style="display: none" id="saveButton">
+                <i class="far fa-save fa-lg"></i>
+              </button>
+
+              <input
+                style="display: none"
+                id="noteInputTitle"
+                type="text"
+                name="noteInputTitle"
+              />
+              <p style="display: none" id="titleRequired" class="errorText">
+                Title is required
+              </p>
+
+              <textarea
+                style="display: none"
+                id="noteInputContent"
+                name="noteInputContent"
+              ></textarea>
+              <p style="display: none" id="contentRequired" class="errorText">
+                Content is required
+              </p>
+            </form>
           </div>
         </div>
       </div>
     </div>
+    <script src="js/dashboard.js"></script>
   </body>
 </html>

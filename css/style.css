@@ -48,6 +48,9 @@
 
 #userInfo {
   float: right;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 #userInfo img {
@@ -81,11 +84,21 @@
 #actions {
   width: 100%;
   display: flex;
-  margin-top: 50px;
   justify-content: flex-end;
 }
 
 #actions button {
+  margin-right: 10px;
+  margin-left: 10px;
+  background: #004cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+.buttonStyle {
   margin-right: 10px;
   margin-left: 10px;
   background: #004cff;
@@ -109,7 +122,7 @@
 
 #loginBox {
   width: 400px;
-  height: 400px;
+  height: 450px;
   display: flex;
   align-items: center;
   background: #ffffff;
@@ -176,4 +189,81 @@
 .signUpText a {
   text-decoration: none;
   color: #004cff;
+}
+
+.errorText {
+  font-size: 14px;
+  color: red;
+  text-align: left;
+  padding-left: 5px;
+  margin-top: -10px;
+  margin-bottom: 13px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+#wrongLogin,
+#userExists {
+  margin-top: 30px;
+  text-align: center;
+}
+
+#saveButton {
+  float: right;
+  margin-bottom: 10px;
+  width: 50px;
+  font-family: "Noto Sans TC", sans-serif;
+  text-transform: uppercase;
+  font-size: small;
+  border: 0px;
+  height: 50px;
+  background: #004cff;
+  color: #ffffff;
+  border-radius: 50%;
+}
+
+#editorForm {
+  height: 100%;
+}
+
+#editorForm input[type="text"] {
+  margin-top: 20px;
+  width: 98%;
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-bottom: 15px;
+}
+
+#editorForm textarea {
+  width: 98%;
+  resize: none;
+  height: 97%;
+  display: block;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-bottom: 15px;
+}
+.userWelcome {
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  margin-bottom: 30px;
+}
+
+.userWelcome img {
+  margin-bottom: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }

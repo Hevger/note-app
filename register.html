@@ -9,20 +9,43 @@
   <body>
     <div id="wrapper">
       <div id="loginBox">
-        <form>
-          <input type="text" name="email" placeholder="Email address" />
+        <form id="registerForm">
+          <input type="text" id="name" name="name" placeholder="Name" />
+          <p style="display: none" id="nameRequired" class="errorText">
+            Name is required.
+          </p>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email address"
+          />
+          <p style="display: none" id="emailRequired" class="errorText">
+            Email is not valid
+          </p>
           <input type="password" name="password" placeholder="Password" />
+          <p style="display: none" id="passwordRequired" class="errorText">
+            Password must be between 6 and 50 characters
+          </p>
           <input
             type="password"
             name="repassword"
             placeholder="Confirm password"
           />
-          <button>Sign in</button>
+          <p style="display: none" id="repasswordRequired" class="errorText">
+            Password confirmation is required
+          </p>
+          <button>Sign up</button>
           <p class="signUpText">
-            Already have an account? <a href="login.html">Sign in</a>
+            Already have an account? <a href="index.html">SIGN IN</a>
+          </p>
+
+          <p style="display: none" id="userExists" class="errorText">
+            User already exsits.
           </p>
         </form>
       </div>
     </div>
+    <script src="js/register.js"></script>
   </body>
 </html>

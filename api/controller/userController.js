@@ -31,12 +31,13 @@ exports.registerUser = (req, res) => {
       }
     });
   } else {
-    res.json(userRegistrationResult.errors);
+    res.status(401).json(userRegistrationResult.errors);
   }
 };
 
 // User login
 exports.loginUser = (req, res) => {
+  console.log(req.body);
   const userLoginResult = userLoginValidator(req.body);
 
   const email = req.body.email;
@@ -49,7 +50,7 @@ exports.loginUser = (req, res) => {
       if (!currentUser) {
         userLoginResult.errors.error =
           "Please provide a valid username and password.";
-        return res.status(404).json(userLoginResult.errors);
+        return res.status(401).json(userLoginResult.errors);
       } else {
         // User exists let's check his password
 
@@ -78,13 +79,13 @@ exports.loginUser = (req, res) => {
           } else {
             userLoginResult.errors.error =
               "Please provide a valid username and password.";
-            return res.status(404).json(userLoginResult.errors);
+            return res.status(401).json(userLoginResult.errors);
           }
         });
       }
     });
   } else {
-    res.json(userRegistrationResult.errors);
+    res.status(401).json(userLoginResult.errors);
   }
 };
 
