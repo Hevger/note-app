@@ -69,6 +69,11 @@
   line-break: anywhere;
 }
 
+#noteBody {
+  overflow: auto;
+  height: 90%;
+}
+
 #noteslist li {
   overflow: hidden;
 }
