@@ -37,7 +37,6 @@ exports.registerUser = (req, res) => {
 
 // User login
 exports.loginUser = (req, res) => {
-  console.log(req.body);
   const userLoginResult = userLoginValidator(req.body);
 
   const email = req.body.email;
